@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Stimulsoft.Report.Mvc;
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -6,8 +8,17 @@
     <title>Index</title>
 </head>
 <body>
-    <div> 
-        Index
+    <div>
+        @Html.Stimulsoft().StiMvcViewer(new StiMvcViewerOptions()
+               {
+                   Actions =
+                   {
+                       GetReportSnapshot = "GetReportSnapshot",
+                       ViewerEvent = "ViewerEvent"
+                   }
+               })
+
+
     </div>
 </body>
 </html>
