@@ -9,3 +9,28 @@
 3. Разработать сервис, предварительного построителя отчета, который будет заполнять таблицу п.1.1. на постоянной основе, проверяя актуальность в ней данных, отлавливать изменения в основных таблицах. (В этот момент мы предоставим исходники того, как работает в настоящий момент построения отчетов, что бы можно было видеть в какие таблицы что записывается, откуда что берется и т.д.)
 
 Для тестового задания необходимо 1, 1.1, 2 пункты.
+
+```
+DECLARE @CMD nvarchar(max)
+SET @CMD = 'SELECT [Employee], [Date], [Department], [Position], [PlanStart], [Norm], [WorkedOut], [Late], [Details] FROM [Report]'
+
+SET @CMD = @CMD + ' WHERE CONVERT(date, [Date]) >= ''' + CAST(CONVERT(date, @PeriodFrom) as varchar(255)) + '''' +
+				  ' AND CONVERT(date, [Date]) <= ''' + CAST(CONVERT(date, @PeriodTo) as varchar(255)) + ''''
+
+IF (@Department <> 'Все')
+BEGIN
+	SET @CMD = @CMD + ' AND Department = ''' + @Department + ''''
+END
+
+IF (@Position <> 'Все')
+BEGIN
+	SET @CMD = @CMD + ' AND Position = ''' + @Position + ''''
+END
+
+IF (@Employee <> 'Все')
+BEGIN
+	SET @CMD = @CMD + ' AND Employee = ''' + @Employee + ''''
+END
+
+EXEC sp_executesql @CMD
+```
