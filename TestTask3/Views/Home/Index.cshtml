@@ -1,25 +1,23 @@
 ﻿@using Stimulsoft.Report.Mvc;
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Журнал рабочего времени</title>
 </head>
 <body>
     <div>
-        @Html.Stimulsoft().StiMvcViewer(new StiMvcViewerOptions()
-               {
-                   Actions =
-                   {
-                       GetReportSnapshot = "GetReportSnapshot",
-                       ViewerEvent = "ViewerEvent",
-                       Interaction = "Interaction"
-                   }
-               })
-
-
+        @Html.Stimulsoft().StiMvcViewer(new StiMvcViewerOptions
+        {
+            Actions =
+            {
+                GetReportSnapshot = "GetReportSnapshot",
+                ViewerEvent = "ViewerEvent",
+                Interaction = "Interaction"
+            },
+            Localization = "~/Content/ru.xml"
+        })
     </div>
 </body>
 </html>

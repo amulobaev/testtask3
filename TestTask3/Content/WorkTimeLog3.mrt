@@ -3,11 +3,11 @@
   <Dictionary Ref="1" type="Dictionary" isKey="true">
     <BusinessObjects isList="true" count="0" />
     <Databases isList="true" count="1">
-      <Соединение1 Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
-        <Alias>Соединение1</Alias>
-        <ConnectionStringEncrypted>+VbLSURZQ83iR5y96mQle95u+QvGUQH1Rlu52HlcZSeQxNmJS3HDGWFB6MxNXOGPnlrZCcUF+9VyWv1YTgSx5+Rwy0heXdmZ81uNmGOYpF701NE=</ConnectionStringEncrypted>
-        <Name>Соединение1</Name>
-      </Соединение1>
+      <SqlConnection Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>SqlConnection</Alias>
+        <ConnectionStringEncrypted>+VTZCUxbu6RFSTmYekmoY4vy2YhmV3udb1y5yflcJRPRxPcLzUx73W5N2b1qcGF7jXD3YFZZwtVnXTlsZEzhL9k=</ConnectionStringEncrypted>
+        <Name>SqlConnection</Name>
+      </SqlConnection>
     </Databases>
     <DataSources isList="true" count="4">
       <Departments Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
@@ -19,7 +19,7 @@
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
         <Name>Departments</Name>
-        <NameInSource>Соединение1</NameInSource>
+        <NameInSource>SqlConnection</NameInSource>
         <Parameters isList="true" count="0" />
         <SqlCommand>SELECT NULL AS Id, 'Все' as Name
 UNION
@@ -34,7 +34,7 @@ SELECT Id, Name FROM Departments</SqlCommand>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
         <Name>Positions</Name>
-        <NameInSource>Соединение1</NameInSource>
+        <NameInSource>SqlConnection</NameInSource>
         <Parameters isList="true" count="0" />
         <SqlCommand>SELECT NULL AS Id, 'Все' AS Name
 UNION
@@ -49,7 +49,7 @@ SELECT Id, Name FROM Positions</SqlCommand>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
         <Name>Employees</Name>
-        <NameInSource>Соединение1</NameInSource>
+        <NameInSource>SqlConnection</NameInSource>
         <Parameters isList="true" count="0" />
         <SqlCommand>SELECT NULL AS Id, 'Все' AS Name
 UNION
@@ -72,7 +72,7 @@ SELECT Id, Name FROM Employees
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
         <Name>ReportSource</Name>
-        <NameInSource>Соединение1</NameInSource>
+        <NameInSource>SqlConnection</NameInSource>
         <Parameters isList="true" count="5">
           <value>_x0040_Department,Department,22,255</value>
           <value>_x0040_Position,Position,22,255</value>
@@ -776,10 +776,10 @@ EXEC sp_executesql @CMD</SqlCommand>
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>7/14/2015 4:21:51 PM</ReportChanged>
+  <ReportChanged>7/14/2015 9:54:28 PM</ReportChanged>
   <ReportCreated>7/13/2015 10:59:33 PM</ReportCreated>
   <ReportFile>C:\Projects\TestTask3\TestTask3\Content\WorkTimeLog3.mrt</ReportFile>
-  <ReportGuid>3830eb082cad4f90a6f3dd14350f1f2a</ReportGuid>
+  <ReportGuid>ffef2abcc31241779fe5c8f4ea6462ce</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2015.1.0</ReportVersion>
