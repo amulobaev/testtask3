@@ -1,20 +1,23 @@
 ﻿namespace TestTask3.Data
 {
+    /// <summary>
+    /// Реализация менеджера миграций
+    /// </summary>
     public class MigrationManager : IMigrationManager
     {
         private readonly string _connectionString;
 
         /// <summary>
-        /// Connection string
+        /// Конструктор
         /// </summary>
-        /// <param name="connectionString"></param>
+        /// <param name="connectionString">Строка подключения к БД</param>
         public MigrationManager(string connectionString)
         {
             _connectionString = connectionString;
         }
 
         /// <summary>
-        /// Start migrations
+        /// Запуск миграций
         /// </summary>
         public void Start()
         {

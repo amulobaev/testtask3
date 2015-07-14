@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using FluentMigrator;
 using FluentMigrator.Runner;
 using FluentMigrator.Runner.Announcers;
@@ -14,23 +10,23 @@ using FluentMigrator.Runner.Processors.SqlServer;
 namespace TestTask3.Data
 {
     /// <summary>
-    /// Database migration
+    /// Реализация мигратора
     /// </summary>
     public class Migrator
     {
         readonly string _connectionString;
 
         /// <summary>
-        /// Default constructor
+        /// Конструктор
         /// </summary>
-        /// <param name="connectionString">Connection string</param>
+        /// <param name="connectionString">Строка подключения</param>
         public Migrator(string connectionString)
         {
             _connectionString = connectionString;
         }
 
         /// <summary>
-        /// Migration options
+        /// Параметры
         /// </summary>
         private class MigrationOptions : IMigrationProcessorOptions
         {
@@ -40,9 +36,9 @@ namespace TestTask3.Data
         }
 
         /// <summary>
-        /// Load migrations, run migrations
+        /// Загрузка, запуск миграций
         /// </summary>
-        /// <param name="runnerAction">Action (Up/Down)</param>
+        /// <param name="runnerAction">Действие миграции</param>
         public void Migrate(Action<IMigrationRunner> runnerAction)
         {
             var options = new MigrationOptions { PreviewOnly = false, Timeout = 0 };

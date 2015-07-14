@@ -21,9 +21,9 @@ namespace TestTask3
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            // Create and start migration manager
-            IMigrationManager migrationManager =
-                new MigrationManager(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            // Запуск менеджера миграций
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            IMigrationManager migrationManager = new MigrationManager(connectionString);
             migrationManager.Start();
 
         }

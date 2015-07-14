@@ -139,10 +139,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TestTask3.Core\TestTask3.Core.csproj">
-      <Project>{8129feec-4995-4462-9d7d-0420d53fcea2}</Project>
-      <Name>TestTask3.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TestTask3.Data\TestTask3.Data.csproj">
       <Project>{43a27dc9-741c-4db2-ac2c-5a82bf97bf57}</Project>
       <Name>TestTask3.Data</Name>

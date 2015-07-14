@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentMigrator;
+﻿using FluentMigrator;
 
 namespace TestTask3.Data.Migrations
 {
+    /// <summary>
+    /// Создание структуры базы
+    /// </summary>
     [Migration(1)]
     public class InitialCreate : Migration
     {
@@ -24,8 +22,8 @@ namespace TestTask3.Data.Migrations
 
             // Сотрудники
             Create.Table("Employees")
-    .WithColumn("Id").AsGuid().PrimaryKey().NotNullable()
-    .WithColumn("Name").AsString().NotNullable();
+                .WithColumn("Id").AsGuid().PrimaryKey().NotNullable()
+                .WithColumn("Name").AsString().NotNullable();
 
             // Отчет
             Create.Table("Report")
@@ -33,10 +31,10 @@ namespace TestTask3.Data.Migrations
                 .WithColumn("Date").AsDate().Nullable() // Дата
                 .WithColumn("Department").AsString().Nullable() // Отдел
                 .WithColumn("Position").AsString().Nullable() // Должность
-                .WithColumn("PlanStart").AsDateTime().Nullable() // Начало смены
-                .WithColumn("Norm").AsDecimal().Nullable() // Норма
-                .WithColumn("WorkedOut").AsTime().Nullable() // Отработано
-                .WithColumn("Late").AsTime().Nullable() // Опоздание
+                .WithColumn("PlanStart").AsString().Nullable() // Начало смены
+                .WithColumn("Norm").AsString().Nullable() // Норма
+                .WithColumn("WorkedOut").AsString().Nullable() // Отработано
+                .WithColumn("Late").AsString().Nullable() // Опоздание
                 .WithColumn("Details").AsString().Nullable();  // Детали
         }
 

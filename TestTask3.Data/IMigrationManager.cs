@@ -1,9 +1,12 @@
 ﻿namespace TestTask3.Data
 {
+    /// <summary>
+    /// Интерфейс менеджера миграций
+    /// </summary>
     public interface IMigrationManager
     {
         /// <summary>
-        /// Start migrations
+        /// Запуск миграций
         /// </summary>
         void Start();
     }
