@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Соединение1 Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Соединение1</Alias>
+        <ConnectionStringEncrypted>+VbLSURZQ83iR5y96mQle95u+QvGUQH1Rlu52HlcZSeQxNmJS3HDGWFB6MxNXOGPnlrZCcUF+9VyWv1YTgSx5+Rwy0heXdmZ81uNmGOYpF701NE=</ConnectionStringEncrypted>
+        <Name>Соединение1</Name>
+      </Соединение1>
+    </Databases>
+    <DataSources isList="true" count="3">
+      <Departments Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Departments</Alias>
+        <Columns isList="true" count="2">
+          <value>Id,System.Guid</value>
+          <value>Name,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>Departments</Name>
+        <NameInSource>Соединение1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>SELECT NULL AS Id, '&lt;Все&gt;' as Name
+UNION
+SELECT Id, Name FROM Departments
+ORDER BY Name</SqlCommand>
+      </Departments>
+      <Positions Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Positions</Alias>
+        <Columns isList="true" count="2">
+          <value>Id,System.Guid</value>
+          <value>Name,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>Positions</Name>
+        <NameInSource>Соединение1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>SELECT NULL AS Id, '&lt;Все&gt;' AS Name
+UNION
+SELECT Id, Name FROM Positions
+ORDER BY Name</SqlCommand>
+      </Positions>
+      <Employees Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Employees</Alias>
+        <Columns isList="true" count="2">
+          <value>Id,System.Guid</value>
+          <value>Name,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>Employees</Name>
+        <NameInSource>Соединение1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>SELECT NULL AS Id, '&lt;Все&gt;' AS Name
+UNION
+SELECT Id, Name FROM Employees
+ORDER BY Name</SqlCommand>
+      </Employees>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="5">
+      <value>,Department,Подразделение,,System.String,,False,False,True,False,_x003C__x003F_xml_x0020_version_x003D__x0022_1.0_x0022__x0020_encoding_x003D__x0022_utf-16_x0022__x0020_standalone_x003D__x0022_yes_x0022__x003F__x003E__x003C_StiSerializer_x0020_version_x003D__x0022_1.02_x0022__x0020_type_x003D__x0022_Net_x0022__x0020_application_x003D__x0022_State_x0022__x003E__x003C_ItemsInitializationType_x003E_Columns_x003C__x002F_ItemsInitializationType_x003E__x003C_KeysColumn_x003E_Departments.Name_x003C__x002F_KeysColumn_x003E__x003C_ValuesColumn_x003E_Departments.Name_x003C__x002F_ValuesColumn_x003E__x003C_BindingVariable_x0020_isNull_x003D__x0022_true_x0022__x0020__x002F__x003E__x003C_Keys_x0020_isList_x003D__x0022_true_x0022__x0020_count_x003D__x0022_0_x0022__x0020__x002F__x003E__x003C_Values_x0020_isList_x003D__x0022_true_x0022__x0020_count_x003D__x0022_0_x0022__x0020__x002F__x003E__x003C_ValuesBinding_x0020_isList_x003D__x0022_true_x0022__x0020_count_x003D__x0022_0_x0022__x0020__x002F__x003E__x003C__x002F_StiSerializer_x003E_</value>
+      <value>,Position,Должность,,System.String,,False,False,True,False,_x003C__x003F_xml_x0020_version_x003D__x0022_1.0_x0022__x0020_encoding_x003D__x0022_utf-16_x0022__x0020_standalone_x003D__x0022_yes_x0022__x003F__x003E__x003C_StiSerializer_x0020_version_x003D__x0022_1.02_x0022__x0020_type_x003D__x0022_Net_x0022__x0020_application_x003D__x0022_State_x0022__x003E__x003C_ItemsInitializationType_x003E_Columns_x003C__x002F_ItemsInitializationType_x003E__x003C_KeysColumn_x003E_Positions.Name_x003C__x002F_KeysColumn_x003E__x003C_ValuesColumn_x003E_Positions.Name_x003C__x002F_ValuesColumn_x003E__x003C_BindingVariable_x0020_isNull_x003D__x0022_true_x0022__x0020__x002F__x003E__x003C_Keys_x0020_isList_x003D__x0022_true_x0022__x0020_count_x003D__x0022_0_x0022__x0020__x002F__x003E__x003C_Values_x0020_isList_x003D__x0022_true_x0022__x0020_count_x003D__x0022_0_x0022__x0020__x002F__x003E__x003C_ValuesBinding_x0020_isList_x003D__x0022_true_x0022__x0020_count_x003D__x0022_0_x0022__x0020__x002F__x003E__x003C__x002F_StiSerializer_x003E_</value>
+      <value>,Employee,Employee,,System.String,,False,False,True,False,_x003C__x003F_xml_x0020_version_x003D__x0022_1.0_x0022__x0020_encoding_x003D__x0022_utf-16_x0022__x0020_standalone_x003D__x0022_yes_x0022__x003F__x003E__x003C_StiSerializer_x0020_version_x003D__x0022_1.02_x0022__x0020_type_x003D__x0022_Net_x0022__x0020_application_x003D__x0022_State_x0022__x003E__x003C_ItemsInitializationType_x003E_Columns_x003C__x002F_ItemsInitializationType_x003E__x003C_KeysColumn_x003E_Employees.Name_x003C__x002F_KeysColumn_x003E__x003C_ValuesColumn_x003E_Employees.Name_x003C__x002F_ValuesColumn_x003E__x003C_BindingVariable_x0020_isNull_x003D__x0022_true_x0022__x0020__x002F__x003E__x003C_Keys_x0020_isList_x003D__x0022_true_x0022__x0020_count_x003D__x0022_0_x0022__x0020__x002F__x003E__x003C_Values_x0020_isList_x003D__x0022_true_x0022__x0020_count_x003D__x0022_0_x0022__x0020__x002F__x003E__x003C_ValuesBinding_x0020_isList_x003D__x0022_true_x0022__x0020_count_x003D__x0022_0_x0022__x0020__x002F__x003E__x003C__x002F_StiSerializer_x003E_</value>
+      <value>,PeriodFrom,Начало_x0020_периода,,System.DateTime,Today.AddDays_x0028_-1.0_x0029_,False,True,True</value>
+      <value>,PeriodFrom1,Конец_x0020_периода,,System.DateTime,Today,False,True,True</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="6" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <ReportTitleBand1 Ref="7" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text1 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="6" />
+              <Parent isRef="7" />
+              <Text>123!</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="6" />
+          <Parent isRef="6" />
+        </ReportTitleBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>7b9b2b3cacef49ac93da8a67ae9d8cda</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="9" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="10" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>7/14/2015 1:30:38 PM</ReportChanged>
+  <ReportCreated>7/13/2015 10:59:33 PM</ReportCreated>
+  <ReportFile>C:\Projects\TestTask3\TestTask3\Content\WorkTimeLog3.mrt</ReportFile>
+  <ReportGuid>646435aa67a34de189305e5cd0db1a6f</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2015.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

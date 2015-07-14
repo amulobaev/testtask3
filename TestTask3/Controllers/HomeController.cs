@@ -19,7 +19,9 @@ namespace TestTask3.Controllers
         public ActionResult GetReportSnapshot()
         {
             StiReport report = new StiReport();
-            
+
+            report.Load(Server.MapPath("~/Content/WorkTimeLog3.mrt"));
+
             return StiMvcViewer.GetReportSnapshotResult(report);
         }
 
@@ -27,5 +29,11 @@ namespace TestTask3.Controllers
         {
             return StiMvcViewer.ViewerEventResult();
         }
+
+        public ActionResult Interaction()
+        {
+            return StiMvcViewer.InteractionResult();
+        }
+
     }
 }
